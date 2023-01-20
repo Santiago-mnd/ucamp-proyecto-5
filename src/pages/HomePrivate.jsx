@@ -5,6 +5,7 @@ import useAuth from '../hooks/useAuth';
 import postService from '../services/post.service';
 import authService from '../services/auth.service';
 import NoAccess from '../components/NoAccess';
+import { PPButton } from '../components/PayPalButton';
 
 const HomePrivate = () => {
   const [privateProducts, setPrivateProducts] = useState(
@@ -55,6 +56,11 @@ const HomePrivate = () => {
               <h2 className="text-4xl font-bold mb-4">
                 Home Private
               </h2>
+
+              <PPButton
+                currency={'USD'}
+                showSpinner={false}
+              />
             </div>
           </div>
         </>
