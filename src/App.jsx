@@ -9,20 +9,14 @@ import useAuth from './hooks/useAuth';
 import Home from './pages/Home';
 
 function App() {
-  const { currentUser, setCurrentUser } = useAuth();
+  const { setCurrentUser } = useAuth();
 
-  console.log('currentUser', currentUser);
   useEffect(() => {
     const user = authService.getCurrentUser();
     if (user) {
       setCurrentUser(user);
     }
   }, [setCurrentUser]);
-
-  const logOut = () => {
-    authService.logout();
-    setCurrentUser(null);
-  };
 
   return (
     <div className="App">

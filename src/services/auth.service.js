@@ -1,10 +1,11 @@
-import axios from 'axios';
+import api from './api';
+import TokenService from './token.service';
 
-const API_URL = 'http://localhost:5000/auth';
+// const API_URL = `${import.meta.env.VITE_API_URL}/auth`;
 
 const signup = (username, email, password) => {
-  return axios
-    .post(API_URL + '/signup', {
+  return api
+    .post('auth/signup', {
       username,
       email,
       password,
@@ -21,8 +22,8 @@ const signup = (username, email, password) => {
 };
 
 const login = (email, password) => {
-  return axios
-    .post(API_URL + '/login', {
+  return api
+    .post('/auth/login', {
       email,
       password,
     })
@@ -38,7 +39,8 @@ const login = (email, password) => {
 };
 
 const logout = () => {
-  localStorage.removeItem('user');
+  // localStorage.removeItem('user');
+  TokenService.removeUser();
 };
 
 const getCurrentUser = () => {
