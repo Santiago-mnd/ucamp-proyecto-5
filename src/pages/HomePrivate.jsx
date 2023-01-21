@@ -7,6 +7,7 @@ import authService from '../services/auth.service';
 import NoAccess from '../components/NoAccess';
 import { PPButton } from '../components/PayPalButton';
 import { getCurrentEmail } from '../utils/getEmail';
+import Cart from '../components/icons/Cart';
 
 const HomePrivate = () => {
   const [privateProducts, setPrivateProducts] = useState(
@@ -55,6 +56,8 @@ const HomePrivate = () => {
     window.location.reload();
   };
 
+  console.log('currentUser', currentUser);
+
   return (
     <div className="flex flex-col h-screen">
       {currentUser ? (
@@ -73,6 +76,9 @@ const HomePrivate = () => {
                 No se ha encontrado el usuario.
               </span>
             )}
+            <Link to={'/checkout'}>
+              <Cart Class="w-6" />
+            </Link>
             {currentUser && (
               <div>
                 <button onClick={handleLogout}>

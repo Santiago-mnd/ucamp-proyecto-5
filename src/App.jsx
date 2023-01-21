@@ -8,6 +8,7 @@ import ErrorPage from './pages/Error404';
 import useAuth from './hooks/useAuth';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Checkout from './pages/Checkout';
 
 function App() {
   const { setCurrentUser } = useAuth();
@@ -23,10 +24,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/private" element={<HomePrivate />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/private" element={<HomePrivate />} />
         <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
