@@ -7,6 +7,7 @@ import HomePrivate from './pages/HomePrivate';
 import ErrorPage from './pages/Error404';
 import useAuth from './hooks/useAuth';
 import Home from './pages/Home';
+import Profile from './pages/Profile';
 
 function App() {
   const { setCurrentUser } = useAuth();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/private" element={<HomePrivate />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

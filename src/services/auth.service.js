@@ -3,7 +3,7 @@ import TokenService from './token.service';
 
 // const API_URL = `${import.meta.env.VITE_API_URL}/auth`;
 
-const signup = (username, email, password) => {
+const signup = async (username, email, password) => {
   return api
     .post('auth/signup', {
       username,
@@ -21,7 +21,7 @@ const signup = (username, email, password) => {
     });
 };
 
-const login = (email, password) => {
+const login = async (email, password) => {
   return api
     .post('/auth/login', {
       email,
@@ -32,6 +32,10 @@ const login = (email, password) => {
         localStorage.setItem(
           'user',
           JSON.stringify(response.data)
+        );
+        localStorage.setItem(
+          'email',
+          JSON.stringify(email)
         );
       }
       return response.data;

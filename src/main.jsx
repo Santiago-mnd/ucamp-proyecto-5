@@ -12,8 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <PayPalScriptProvider
         options={{
-          'client-id':
-            'AfZlsdqtQwKlUlinZyELHKSYblb28GOIjYoMOVg7gi88RCoMm90M8WL9kprtwQv4Uz6uBPInkBKRhbiW',
+          'client-id': import.meta.env
+            .VITE_PAYPAL_CLIENT_ID,
         }}
       >
         <Router>
