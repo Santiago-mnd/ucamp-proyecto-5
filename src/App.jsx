@@ -7,11 +7,13 @@ import HomePrivate from './pages/HomePrivate';
 import ErrorPage from './pages/Error404';
 import useAuth from './hooks/useAuth';
 import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Checkout from './pages/Checkout';
+import Product from './pages/Product';
 
 function App() {
-  const { currentUser, setCurrentUser } = useAuth();
+  const { setCurrentUser } = useAuth();
 
-  console.log('currentUser', currentUser);
   useEffect(() => {
     const user = authService.getCurrentUser();
     if (user) {
@@ -19,18 +21,19 @@ function App() {
     }
   }, [setCurrentUser]);
 
-  const logOut = () => {
-    authService.logout();
-    setCurrentUser(null);
-  };
-
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/private" element={<HomePrivate />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/private" element={<HomePrivate />} />
+        <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/private/product/:price"
+          element={<Product />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

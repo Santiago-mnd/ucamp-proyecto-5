@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import authService from '../services/auth.service';
 import useAuth from '../hooks/useAuth';
+import { userCheck } from '../utils/userCheck';
+import ErrorMessage from '../components/ErrorMessage';
 
 const Login = () => {
-  const { signup, handleChangeSignup } = useAuth();
+  const [error, setError] = useState('');
+  const { signup, handleChangeSignup, currentUser } =
+    useAuth();
   const navigate = useNavigate();
+
+  userCheck(currentUser);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,14 +25,24 @@ const Login = () => {
         )
         .then(
           (response) => {
-            console.log(response);
+            navigate('/login');
           },
           (error) => {
-            console.log(error);
+            if (error?.response?.data?.message) {
+              setError(error.response.data.message);
+              return;
+            } else {
+              setError(error.response.data.errors[0].msg);
+            }
           }
         );
     } catch (error) {
-      console.log(error);
+      if (error?.response?.data?.message) {
+        setError(error.response.data.message);
+        return;
+      } else {
+        setError(error.response.data.errors[0].msg);
+      }
     }
   };
 
@@ -35,6 +52,7 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center w-96 h-96 bg-gray-200 rounded-lg shadow-2xl "
       >
+        {error && <ErrorMessage error={error} />}
         <h2 className="text-4xl font-bold mb-4">
           Registrarse
         </h2>

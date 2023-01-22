@@ -1,0 +1,74 @@
+[
+  {
+    "_id": 1,
+    "name": "Dolor laborum.",
+    "image": "https://images.unsplash.com/photo-1582173649515-0f9582d58e60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80",
+    "price": 20,
+    "description": "Reprehenderit dolor Lorem do Lorem enim magna enim. Dolore velit nisi eu nostrud esse dolor laboris esse commodo officia. Qui officia qui est nulla voluptate duis non. Consectetur esse aliquip pariatur eiusmod dolore dolor adipisicing laborum officia esse nisi laboris proident. Ut eu occaecat voluptate elit quis nisi.",
+    "category": "Lorem"
+  },
+  {
+    "_id": 2,
+    "name": "Consequat id.",
+    "image": "https://images.unsplash.com/photo-1600841784377-45b805f54d34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "price": 10,
+    "description": "Consequat laboris consectetur nostrud aliquip nostrud irure dolor quis adipisicing ea nisi culpa aute sit. Sit exercitation id laboris sint amet cupidatat quis reprehenderit officia enim. Cillum aliqua labore fugiat id enim deserunt mollit quis dolor. Aliqua consectetur exercitation incididunt enim. Lorem labore officia minim exercitation irure minim ea commodo nulla. Labore sint qui nostrud ad cupidatat pariatur nisi dolor exercitation est.",
+    "category": "Lorem"
+  },
+  {
+    "_id": 3,
+    "name": "Sit enim laborum.",
+    "image": "https://images.unsplash.com/photo-1613728913293-c99bb00ef39c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 30,
+    "description": "Cillum labore exercitation sit ex non non enim eu. Lorem aliqua proident adipisicing magna ullamco nulla quis aute amet eu pariatur. Minim laboris velit fugiat adipisicing excepteur laborum enim ipsum cillum fugiat ipsum est veniam esse. Exercitation culpa laborum eiusmod laboris et. Consequat pariatur culpa incididunt mollit incididunt tempor. Minim quis ex elit id culpa labore ea commodo eiusmod nulla amet.",
+    "category": "Quis"
+  },
+  {
+    "_id": 4,
+    "name": "Fugiat ipsum.",
+    "image": "https://images.unsplash.com/photo-1613758235402-745466bb7efe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 40,
+    "description": "Amet ad esse dolor minim ad. In elit tempor cupidatat consectetur occaecat eu irure voluptate magna in. Elit irure quis sint cillum pariatur voluptate elit amet Lorem eu. Ipsum elit laborum duis in voluptate occaecat. Id adipisicing sit in aliquip laborum esse qui cillum proident enim proident labore proident.",
+    "category": "Quis"
+  },
+  {
+    "_id": 5,
+    "name": "Dolor laborum.",
+    "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+    "price": 50,
+    "description": "Est aliqua duis do qui tempor pariatur est ea sit sunt et elit. Dolor minim deserunt labore fugiat ad. Reprehenderit id voluptate nisi anim quis duis aliquip laboris eiusmod in sit. Id veniam nulla aliquip consectetur minim sint. Sunt deserunt ut duis sunt ad sint elit ullamco ex incididunt excepteur.",
+    "category": "Amet"
+  },
+  {
+    "_id": 6,
+    "name": "Non deserunt.",
+    "image": "https://images.unsplash.com/photo-1613728913084-090a0d106c3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 60,
+    "description": "Ex ea amet adipisicing Lorem aliquip Lorem aute qui ullamco officia proident ullamco. Magna aute aliquip ullamco mollit pariatur qui deserunt ut proident ut. Ipsum elit qui in dolor nulla ut veniam amet reprehenderit.",
+    "category": "Amet"
+  },
+  {
+    "_id": 7,
+    "name": "Dolor.",
+    "image": "https://images.unsplash.com/photo-1606486544554-164d98da4889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 70,
+    "description": "In qui nostrud ex et reprehenderit anim cillum. Quis do eiusmod exercitation ad do est amet excepteur sint ut. Pariatur do eu aute eiusmod sit reprehenderit tempor occaecat culpa commodo duis est sit officia. Voluptate exercitation reprehenderit ad in ad duis. Non aliquip adipisicing culpa officia laborum consectetur occaecat tempor do. Laboris enim ad non aute magna consectetur culpa nulla do velit deserunt eu.",
+    "category": "Enim"
+  },
+  {
+    "_id": 8,
+    "name": "Laborum.",
+    "image": "https://images.unsplash.com/photo-1613728913341-8f29b02b8253?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 80,
+    "description": "Anim laboris culpa quis commodo qui veniam aute officia nostrud tempor sunt aliqua. Ea labore ut aute magna officia laboris laboris. Voluptate minim enim sint ullamco sit. Sit quis veniam irure voluptate in mollit ut eu Lorem proident ea sint est. Aliquip nostrud minim magna consequat proident et dolore.",
+    "category": "Enim"
+  },
+  {
+    "_id": 9,
+    "name": "Do occaecat.",
+    "image": "https://images.unsplash.com/photo-1614373532018-92a75430a0da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "price": 90,
+    "description": "Ad labore reprehenderit elit aute. Magna amet amet anim eiusmod adipisicing Lorem proident. Deserunt nostrud duis laboris amet irure velit. Reprehenderit laboris reprehenderit mollit sunt in. Deserunt magna excepteur excepteur amet ut excepteur ipsum ipsum eu irure magna. Exercitation cupidatat officia est cupidatat nostrud consectetur aute sint ullamco sint eu. Culpa ullamco laboris tempor qui ex.",
+    "category": "Occaecat."
+  }
+]

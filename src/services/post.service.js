@@ -1,16 +1,15 @@
-import axios from 'axios';
-import authHeader from './auth-header';
+import api from './api';
+// import axios from 'axios';
+// import authHeader from './auth-header';
 
-const API_URL = import.meta.env.VITE_API_URL;
+// const API_URL = import.meta.env.VITE_API_URL;
 
 const getAllPublicProducts = () => {
-  return axios.get(API_URL + '/public');
+  return api.get('/public');
 };
 
 const getAllPrivateProducts = () => {
-  return axios.get(API_URL + '/private', {
-    headers: authHeader(),
-  });
+  return api.get('/private');
 };
 
 const postService = {

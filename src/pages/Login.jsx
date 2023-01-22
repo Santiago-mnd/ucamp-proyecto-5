@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import authService from '../services/auth.service';
 import useAuth from '../hooks/useAuth';
+import { userCheck } from '../utils/userCheck';
+import ErrorMessage from '../components/ErrorMessage';
 
 const Login = () => {
-  const { login, handleChangeLogin } = useAuth();
+  const [error, setError] = useState('');
+  const { login, handleChangeLogin, currentUser } =
+    useAuth();
   const navigate = useNavigate();
+
+  userCheck(currentUser);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,21 +23,22 @@ const Login = () => {
           window.location.reload();
         },
         (error) => {
-          console.log(error);
+          setError(error.response.data.message);
         }
       );
     } catch (error) {
-      console.log(error);
+      setError(error.response.data.message);
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-red-400 ">
+    <div className="flex flex-col justify-center items-center h-screen bg-red-400 ">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center w-96 h-96 bg-gray-200 rounded-lg shadow-2xl "
       >
-        <h2 className="text-4xl font-bold mb-4">
+        {error && <ErrorMessage error={error} />}
+        <h2 className="text-4xl font-bold my-4">
           Iniciar sesión
         </h2>
         <input
@@ -51,7 +59,7 @@ const Login = () => {
         />
         <button
           type="submit"
-          className="w-80 h-10 rounded-lg bg-blue-400 text-white disabled:opacity-50 disabled:cursor-not-allowed "
+          className="w-80 h-10 rounded-lg bg-blue-400 font-bold text-white disabled:opacity-50 disabled:cursor-not-allowed "
           disabled={!login.email || !login.password}
         >
           Iniciar sesión

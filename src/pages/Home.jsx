@@ -10,29 +10,24 @@ const Home = () => {
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    postService.getAllPublicProducts().then(
-      (response) => {
-        setProducts(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    postService.getAllPublicProducts().then((response) => {
+      setProducts(response.data);
+    });
   }, []);
 
   return (
-    <div className="bg-red-400 h-screen w-full text-white flex justify-center items-center">
+    <div className="bg-red-400 h-screen w-full overflow-y-scroll text-white flex justify-center items-center">
       <div className="flex flex-col items-center">
         <h2 className="text-6xl mb-6 font-bold text-center">
           E-xclusive
         </h2>
-        <div className="flex justify-evenly items-center w-full  mx-auto flex-wrap gap-4 md:w-1/2 md:flex-nowrap ">
+        <div className="flex justify-evenly items-center w-full mx-auto flex-wrap gap-4 md:w-1/2 md:flex-nowrap ">
           {products.length !== 0 ? (
             products.map((product) => (
               <img
                 width="200"
                 height="200"
-                className="object-cover w-96 h-96 "
+                className="object-cover w-24 h-24 rounded-md shadow-2xl md:w-64 md:h-64 "
                 src={product.image}
                 alt={product.name}
                 key={product._id}
