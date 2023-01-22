@@ -1,6 +1,7 @@
 ## Tecnologías
 
 - React
+- Tailwind
 - Vite
 - React-router-dom
 - Axios
