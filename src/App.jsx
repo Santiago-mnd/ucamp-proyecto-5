@@ -9,6 +9,7 @@ import useAuth from './hooks/useAuth';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Checkout from './pages/Checkout';
+import Product from './pages/Product';
 
 function App() {
   const { setCurrentUser } = useAuth();
@@ -29,6 +30,10 @@ function App() {
         <Route path="/private" element={<HomePrivate />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/private/product/:price"
+          element={<Product />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

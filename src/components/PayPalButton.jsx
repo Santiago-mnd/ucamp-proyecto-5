@@ -3,11 +3,10 @@ import {
   PayPalButtons,
   usePayPalScriptReducer,
 } from '@paypal/react-paypal-js';
+import useCheckout from '../hooks/useCheckout';
 
 // This values are the props in the UI
-// TODO: editar el valor de amount con un context para el carrito
 // sb-pcrjd8821896@personal.example.com <- test-account
-const amount = '2';
 const style = { layout: 'vertical' };
 
 // Custom component to wrap the PayPalButtons and handle currency changes
@@ -16,6 +15,13 @@ export const PPButton = ({ currency, showSpinner }) => {
   // This is the main reason to wrap the PayPalButtons in a new component
   const [{ options, isPending }, dispatch] =
     usePayPalScriptReducer();
+
+  // const amount = '2';
+  const { cart, setCart } = useCheckout();
+
+  const amount = cart
+    .map(({ price, quantity }) => price * quantity)
+    .reduce((a, b) => a + b, 0);
 
   useEffect(() => {
     dispatch({
@@ -56,8 +62,7 @@ export const PPButton = ({ currency, showSpinner }) => {
         }}
         onApprove={function (data, actions) {
           return actions.order.capture().then(function () {
-            // Your code here after capture the order
-            console.log('Order captured');
+            setCart([]);
           });
         }}
       />

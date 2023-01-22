@@ -32,36 +32,33 @@ instance.interceptors.response.use(
     return res;
   },
   async (err) => {
-    const originalConfig = err.config;
+    // const originalConfig = err.config;
 
-    if (err.response) {
-      if (
-        (err.response.status === 403 &&
-          !originalConfig._retry) ||
-        (err.response.status === 401 &&
-          !originalConfig._retry)
-      ) {
-        originalConfig._retry = true;
+    // if (err.response) {
+    //   if (
+    //     (err.response.status === 403 &&
+    //       !originalConfig._retry) ||
+    //     (err.response.status === 401 &&
+    //       !originalConfig._retry)
+    //   ) {
+    //     originalConfig._retry = true;
 
-        try {
-          const rs = await instance.post('/auth/token', {
-            refreshToken:
-              TokenService.getLocalRefreshToken(),
-          });
+    //     try {
+    //       const rs = await instance.post('/auth/token', {
+    //         refreshToken:
+    //           TokenService.getLocalRefreshToken(),
+    //       });
 
-          console.log('response', rs);
+    //       const { accessToken } = rs.data;
 
-          const { accessToken } = rs.data;
+    //       TokenService.updateNewAccessToken(accessToken);
 
-          console.log('updateNewAccessToken', accessToken);
-          TokenService.updateNewAccessToken(accessToken);
-
-          return instance(originalConfig);
-        } catch (_error) {
-          return Promise.reject(_error);
-        }
-      }
-    }
+    //       return instance(originalConfig);
+    //     } catch (_error) {
+    //       return Promise.reject(_error);
+    //     }
+    //   }
+    // }
 
     return Promise.reject(err);
   }
