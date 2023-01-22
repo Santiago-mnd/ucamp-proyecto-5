@@ -20,7 +20,6 @@ const HomePrivate = () => {
   const { cart, addToCart } = useCheckout();
   const email = getCurrentEmail() || '';
 
-  console.log('cart', cart);
   useEffect(() => {
     if (currentUser) {
       postService

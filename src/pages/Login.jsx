@@ -23,10 +23,18 @@ const Login = () => {
           window.location.reload();
         },
         (error) => {
+          if (error.response.data.errors[0].message) {
+            setError(error.response.data.errors[0].message);
+            return;
+          }
           setError(error.response.data.message);
         }
       );
     } catch (error) {
+      if (error.response.data.errors[0].message) {
+        setError(error.response.data.errors[0].message);
+        return;
+      }
       setError(error.response.data.message);
     }
   };

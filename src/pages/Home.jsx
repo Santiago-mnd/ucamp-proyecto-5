@@ -27,7 +27,7 @@ const Home = () => {
               <img
                 width="200"
                 height="200"
-                className="object-cover w-24 h-24 rounded-md shadow-2xl md:w-96 md:h-96 "
+                className="object-cover w-24 h-24 rounded-md shadow-2xl md:w-64 md:h-64 "
                 src={product.image}
                 alt={product.name}
                 key={product._id}
