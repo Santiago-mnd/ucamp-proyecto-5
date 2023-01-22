@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import authService from '../services/auth.service';
 import useAuth from '../hooks/useAuth';
@@ -64,6 +64,20 @@ const Login = () => {
         >
           Iniciar sesión
         </button>
+        <div className="mt-3 flex flex-col">
+          <Link
+            to="/signup"
+            className="w-80 h-10 rounded-lg bg-blue-400 font-bold text-white my-2 flex items-center justify-center"
+          >
+            Registrarse
+          </Link>
+          <Link
+            to="/"
+            className="w-80 h-10 rounded-lg bg-blue-400 font-bold text-white my-2 flex items-center justify-center "
+          >
+            Volver a la página principal
+          </Link>
+        </div>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import authService from '../services/auth.service';
 import useAuth from '../hooks/useAuth';
@@ -50,7 +50,7 @@ const Login = () => {
     <div className="flex justify-center items-center h-screen bg-red-400 ">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center w-96 h-96 bg-gray-200 rounded-lg shadow-2xl "
+        className="flex flex-col justify-center items-center w-96 bg-gray-200 rounded-lg shadow-2xl p-12 "
       >
         {error && <ErrorMessage error={error} />}
         <h2 className="text-4xl font-bold mb-4">
@@ -91,6 +91,20 @@ const Login = () => {
         >
           Iniciar sesión
         </button>
+        <div className="mt-3 flex flex-col">
+          <Link
+            to="/login"
+            className="w-80 h-10 rounded-lg bg-blue-400 font-bold text-white my-2 flex items-center justify-center"
+          >
+            Click aquí si ya tienes cuenta
+          </Link>
+          <Link
+            to="/"
+            className="w-80 h-10 rounded-lg bg-blue-400 font-bold text-white my-2 flex items-center justify-center "
+          >
+            Volver a la página principal
+          </Link>
+        </div>
       </form>
     </div>
   );
